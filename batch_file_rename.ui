@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <underline>false</underline>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="labelAppName">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>14</y>
+      <width>400</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Welcome to Natasha's Bulk Rename Tool</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSelectFolder">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>49</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>Select a Folder</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>129</y>
+      <width>280</width>
+      <height>340</height>
+     </rect>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+   </widget>
+   <widget class="QListView" name="selectView">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>129</y>
+      <width>280</width>
+      <height>340</height>
+     </rect>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSelect">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>469</y>
+      <width>280</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>(Select Files) &gt;&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRemove">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>469</y>
+      <width>280</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>&lt;&lt;&lt; (Remove Files)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioAddPrefix">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>539</y>
+      <width>89</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Add Prefix</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioRemovePrefix">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>539</y>
+      <width>118</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Remove Prefix</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioAddSuffix">
+    <property name="geometry">
+     <rect>
+      <x>274</x>
+      <y>539</y>
+      <width>89</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Add Suffix</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioRemoveSuffix">
+    <property name="geometry">
+     <rect>
+      <x>369</x>
+      <y>539</y>
+      <width>118</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Remove Suffix</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioNewName">
+    <property name="geometry">
+     <rect>
+      <x>494</x>
+      <y>539</y>
+      <width>95</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>New Name</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioReplacePartOfName">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>690</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Replace</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFilesInFolder">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>104</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Files in Folder:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSelectedFiles">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>104</y>
+      <width>280</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Selected Files:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonApply">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>739</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nameEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>629</y>
+      <width>380</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="partNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>691</y>
+      <width>133</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="replacePartNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>691</y>
+      <width>133</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSelectedFolder">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>84</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(No folder is currently selected)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNewText">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>604</y>
+      <width>640</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enter the text for the option selected:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelInstructions">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>514</y>
+      <width>640</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select one option:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNewText_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>664</y>
+      <width>640</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>or replace part of a name with something else:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWith">
+    <property name="geometry">
+     <rect>
+      <x>339</x>
+      <y>690</y>
+      <width>25</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>with</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioConvertToLowercase">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>570</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Convert to Lowercase</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Directory">
+   <property name="text">
+    <string>Open Directory</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
